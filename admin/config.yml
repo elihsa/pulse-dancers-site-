@@ -1,0 +1,67 @@
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "home"
+    label: "Homepage"
+    files:
+      - file: "data/home.json"
+        label: "Hero & CTA"
+        name: "home"
+        fields:
+          - {label: "Hero Title", name: "hero_title", widget: "string"}
+          - {label: "Hero Subtitle", name: "hero_subtitle", widget: "text"}
+          - {label: "CTA Text", name: "cta_text", widget: "string"}
+          - {label: "CTA URL", name: "cta_url", widget: "string"}
+
+  - name: "prices"
+    label: "Prices"
+    files:
+      - file: "data/prices.json"
+        label: "Prices"
+        name: "prices"
+        fields:
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Duration", name: "duration", widget: "string", required: false}
+              - {label: "Price", name: "price", widget: "string"}
+          - {label: "Notes", name: "notes", widget: "text", required: false}
+
+  - name: "faq"
+    label: "FAQ"
+    files:
+      - file: "data/faq.json"
+        label: "FAQ"
+        name: "faq"
+        fields:
+          - label: "Groups"
+            name: "groups"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "Q&As"
+                name: "qas"
+                widget: "list"
+                fields:
+                  - {label: "Question", name: "q", widget: "string"}
+                  - {label: "Answer", name: "a", widget: "text"}
+
+# Optional: separate gallery collection (images live in /images/uploads)
+  - name: "gallery"
+    label: "Gallery"
+    folder: "images/uploads"
+    create: true
+    slug: "{{slug}}"
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Photo", name: "image", widget: "image"}

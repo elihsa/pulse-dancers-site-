@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pulse Dancers</title>
+  <meta name="description" content="South Africa's best male entertainment: choreographed shows, topless & bottomless waiters. Book nationwide." />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="icon" href="/images/logo.png">
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="Pulse Dancers logo"><span class="brand">Pulse Dancers</span></a>
+      <div class="links">
+        <a href="/prices.html">Prices</a>
+        <a href="/faq.html">FAQ</a>
+        <a href="/join.html">Join</a>
+        <a href="/book.html" class="button">Book</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+
+<section class="card">
+  <h2>Join Pulse</h2>
+  <p class="small">Prefer native forms? This page uses Netlify Forms so submissions go straight to your Netlify site.</p>
+  <form name="join" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="join">
+    <p class="small" style="display:none;">
+      <label>Don’t fill this out: <input name="bot-field" /></label>
+    </p>
+    <div class="grid-2">
+      <div class="card"><label>Full Name<br><input required name="name" style="width:100%;padding:10px;border-radius:10px;border:1px solid #2a2a35;background:#0f0f15;color:#fff"></label></div>
+      <div class="card"><label>Email<br><input required type="email" name="email" style="width:100%;padding:10px;border-radius:10px;border:1px solid #2a2a35;background:#0f0f15;color:#fff"></label></div>
+      <div class="card"><label>Phone<br><input name="phone" style="width:100%;padding:10px;border-radius:10px;border:1px solid #2a2a35;background:#0f0f15;color:#fff"></label></div>
+      <div class="card"><label>City<br><input name="city" style="width:100%;padding:10px;border-radius:10px;border:1px solid #2a2a35;background:#0f0f15;color:#fff"></label></div>
+      <div class="card" style="grid-column:1/-1;"><label>Tell us about your dance experience<br><textarea name="experience" rows="5" style="width:100%;padding:10px;border-radius:10px;border:1px solid #2a2a35;background:#0f0f15;color:#fff"></textarea></label></div>
+    </div>
+    <div style="margin-top:12px;"><button type="submit" class="button">Apply</button></div>
+  </form>
+</section>
+
+  </div>
+  <footer class="footer">
+    <div class="container small">
+      <p>© Pulse Dancers · <a href="https://www.instagram.com/pulsesouthafrica" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/pulseSouthAfrica" target="_blank" rel="noopener">Facebook</a></p>
+    </div>
+  </footer>
+  <script src="/assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "name": "Topless Waiter",
+      "duration": "Per hour",
+      "price": "R XXX"
+    },
+    {
+      "name": "Bottomless Waiter",
+      "duration": "Per hour",
+      "price": "R XXX"
+    },
+    {
+      "name": "Exotic Dancer (One-Man Show)",
+      "duration": "20–25 mins",
+      "price": "R XXX"
+    },
+    {
+      "name": "Naughty Games",
+      "duration": "30–45 mins",
+      "price": "R XXX"
+    }
+  ],
+  "notes": "All pricing is editable in the CMS. Travel costs may apply outside major metros."
+}
