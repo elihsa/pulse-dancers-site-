@@ -7,7 +7,25 @@
     <link rel="stylesheet" href="/assets/css/styles.css" />
   </head>
   <body>
-    <div class="container"><p class="small note">If you see an authentication screen, enable Netlify Identity + Git Gateway on your Netlify site, then invite your editor’s email.</p></div>
+    <div class="container">
+      <p class="small note">If you see an authentication screen, make sure Netlify Identity + Git Gateway are enabled for this site, and that you’ve accepted the invite email.</p>
+    </div>
+
+    <!-- Netlify Identity widget (required for Git Gateway auth) -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <!-- Decap (Netlify) CMS -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+    <script>
+      // Optional: after login, reload so CMS picks up the token
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on('init', user => {
+          if (!user) {
+            window.netlifyIdentity.on('login', () => { window.location.reload(); });
+          }
+        });
+      }
+    </script>
   </body>
 </html>
