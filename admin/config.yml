@@ -7,66 +7,60 @@ media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  - name: "home"
-    label: "Homepage"
+  - name: home
+    label: Homepage
     files:
       - file: "data/home.json"
-        label: "Hero & Services"
-        name: "home"
+        label: Hero
+        name: hero
         fields:
-          - {label: "Hero Title", name: "hero_title", widget: "string"}
-          - {label: "Hero Subtitle", name: "hero_subtitle", widget: "text"}
+          - {label: "Hero Title", name: "title", widget: "string"}
+          - {label: "Hero Subtitle", name: "subtitle", widget: "text"}
           - {label: "CTA Text", name: "cta_text", widget: "string"}
           - {label: "CTA URL", name: "cta_url", widget: "string"}
-          - label: "Services"
-            name: "services"
-            widget: "list"
-            fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Description", name: "desc", widget: "text"}
 
-  - name: "prices"
-    label: "Prices"
+  - name: prices
+    label: Prices
     files:
       - file: "data/prices.json"
-        label: "Packages & Prices"
+        label: "Prices"
         name: "prices"
         fields:
-          - label: "Items"
-            name: "items"
-            widget: "list"
+          - label: Items
+            name: items
+            widget: list
             fields:
-              - {label: "Name", name: "name", widget: "string"}
-              - {label: "Duration", name: "duration", widget: "string", required: false}
-              - {label: "Price", name: "price", widget: "string"}
-          - {label: "Notes", name: "notes", widget: "text", required: false}
+              - {label: Name, name: name, widget: string}
+              - {label: Duration, name: duration, widget: string, required: false}
+              - {label: Price, name: price, widget: string}
 
-  - name: "faq"
-    label: "FAQ"
+  - name: faq
+    label: FAQ
     files:
       - file: "data/faq.json"
-        label: "FAQ"
-        name: "faq"
+        label: FAQ
+        name: faq
         fields:
-          - label: "Groups"
-            name: "groups"
-            widget: "list"
+          - label: Groups
+            name: groups
+            widget: list
             fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - label: "Q&As"
-                name: "qas"
-                widget: "list"
+              - {label: Title, name: title, widget: string}
+              - label: Q&As
+                name: qas
+                widget: list
                 fields:
-                  - {label: "Question", name: "q", widget: "string"}
-                  - {label: "Answer", name: "a", widget: "text"}
+                  - {label: Question, name: q, widget: string}
+                  - {label: Answer, name: a, widget: text}
 
-  - name: "gallery"
-    label: "Gallery"
-    folder: "images/uploads"
-    create: true
-    slug: "{{slug}}"
-    media_folder: ""
-    public_folder: ""
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Photo", name: "image", widget: "image"}
+  - name: settings
+    label: Booking Settings
+    files:
+      - file: "data/booking.json"
+        label: Travel/Quote Settings
+        name: booking_settings
+        fields:
+          - {label: Base Location, name: base, widget: string, default: "Sandton City, Johannesburg"}
+          - {label: Free KM, name: free_km, widget: number, default: 50}
+          - {label: Rand Per KM, name: r_per_km, widget: number, default: 4}
+          - {label: Recommendation Text, name: note, widget: string, default: "1 stripper per 20 guests"}

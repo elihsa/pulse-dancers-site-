@@ -1,49 +1,96 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pulse Dancers</title><link rel="stylesheet" href="/assets/css/styles.css"><link rel="icon" href="/images/logo.png"></head><body>
-<nav><div class="nav-inner">
-  <a class="logo" href="/"><img src="/images/logo.png" alt="Pulse Dancers"><span class="brand">Pulse Dancers</span></a>
-  <div class="links">
-    <a href="/prices.html">Prices</a>
-    <a href="/faq.html">FAQ</a>
-    <a href="/join.html">Join</a>
-    <a href="/book.html" class="button">Book</a>
-  </div>
-</div></nav>
-<div class="container">
-
-<section class="section card">
+<!doctype html><html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<link rel="stylesheet" href="/assets/css/styles.css"><title>Pulse Dancers</title></head><body><nav><div class="nav-inner">
+<a href="/">Home</a><a href="/prices.html">Prices</a><a href="/faq.html">FAQ</a><a href="/join.html">Join</a><a class="button" href="/book.html">Book</a>
+</div></nav><div class="container">
+<section class="card">
   <h2>Book a Show</h2>
-  <form name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data">
+  <form name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="bookingForm">
     <input type="hidden" name="form-name" value="booking">
-    <p class="small" style="display:none;"><label>Don’t fill this out: <input name="bot-field" /></label></p>
-    <div class="grid-2">
-      <div><label>Name<input class="input" name="name" required></label></div>
-      <div><label>Email<input class="input" type="email" name="email" required></label></div>
-      <div><label>Phone<input class="input" name="phone"></label></div>
-      <div><label>City<input class="input" name="city"></label></div>
-      <div><label>Event Type<select class="input" name="event_type">
-        <option>Bachelorette</option><option>Birthday</option><option>Girls Night</option><option>Other</option>
-      </select></label></div>
-      <div><label>Event Date<input class="input" type="date" name="date"></label></div>
-      <div><label>Start Time<input class="input" type="time" name="time"></label></div>
-      <div><label>Guests (approx.)<input class="input" type="number" name="guests" min="1"></label></div>
-      <div><label>Service<select class="input" name="service">
-        <option>Topless Waiter</option><option>Bottomless Waiter</option><option>Exotic Dancer (One‑Man Show)</option><option>Naughty Games</option>
-      </select></label></div>
-      <div><label>How many performers?<input class="input" type="number" name="performers" min="1" value="1"></label></div>
-      <div><label>Venue (home / private room?)<input class="input" name="venue"></label></div>
-      <div><label>Address<textarea class="input" name="address" rows="3"></textarea></label></div>
-      <div style="grid-column:1/-1"><label>Add‑ons (optional)
-        <label class="small"><input type="checkbox" name="addon_games"> Naughty Games</label>
-        <label class="small"><input type="checkbox" name="addon_photos"> Extra photo time</label>
-      </label></div>
-      <div style="grid-column:1/-1"><label>Details<textarea class="input" name="details" rows="5" placeholder="Anything the performer should know (conservatism level, surprises, etc.)"></textarea></label></div>
-      <div><label>Budget (optional)<input class="input" name="budget"></label></div>
-      <div><label>How did you hear about us?<input class="input" name="ref"></label></div>
-      <div><label>Attachment (optional)<input class="input" type="file" name="file"></label></div>
+    <p class="small" style="display:none;"><label>Don’t fill this out: <input name="bot-field"></label></p>
+
+    <div class="two">
+      <div>
+        <label>Event Date</label>
+        <input type="date" name="event_date" required>
+      </div>
+      <div>
+        <label>How Many Guests</label>
+        <select name="guests" id="guests" required>
+          <option>Less than 10</option>
+          <option>10 to 20</option>
+          <option>20 to 40</option>
+          <option>40 or more</option>
+        </select>
+      </div>
     </div>
-    <div style="margin-top:12px;"><button class="button" type="submit">Submit Booking</button></div>
+
+    <div class="two">
+      <div>
+        <label>Venue Type</label>
+        <select name="venue_type" id="venue_type" required>
+          <option>Home</option>
+          <option>Event Venue</option>
+          <option>Other</option>
+        </select>
+        <input style="margin-top:8px;display:none" placeholder="Please specify" id="venue_other" name="venue_other">
+      </div>
+      <div>
+        <label>Reason for Event</label>
+        <input name="reason" required>
+      </div>
+    </div>
+
+    <div class="two">
+      <div><label>Host Name</label><input name="host_name" required></div>
+      <div><label>Email</label><input type="email" name="email" required></div>
+    </div>
+
+    <div class="two">
+      <div><label>Phone Number</label><input name="phone" required></div>
+      <div><label>Service</label>
+        <select name="service" id="service">
+          <option>Topless Waiter</option>
+          <option>Bottomless Waiter</option>
+          <option>Exotic Dancer (One-Man Show)</option>
+          <option>Naughty Games</option>
+        </select>
+      </div>
+    </div>
+
+    <fieldset class="card">
+      <legend>Location</legend>
+      <label><input type="radio" name="loc_mode" value="exact" checked> I know the actual address</label>
+      <label><input type="radio" name="loc_mode" value="area"> I just know the area</label>
+      <div id="addressWrap" style="margin-top:8px;">
+        <label>Exact Address</label><input name="address" id="address">
+      </div>
+      <div id="areaWrap" style="display:none;margin-top:8px;">
+        <label>Area</label><input name="area" id="area">
+      </div>
+      <p class="small" id="recNote">Recommendation: 1 stripper per 20 guests.</p>
+    </fieldset>
+
+    <div class="card">
+      <div class="quote">
+        <div>
+          <div class="small">Performance fee</div>
+          <div class="num" id="fee">R0</div>
+        </div>
+        <div>
+          <div class="small">Travel cost</div>
+          <div class="num" id="travel">R0</div>
+          <div class="small" id="travelNote"></div>
+        </div>
+        <div>
+          <div class="small">Total</div>
+          <div class="num" id="total">R0</div>
+        </div>
+      </div>
+      <p class="small">The live quote updates as you change guests or address. Final confirmation is sent by our office.</p>
+    </div>
+
+    <button class="button" type="submit">Submit Booking</button>
   </form>
 </section>
-</div><footer class="footer"><div class="container small">
-  <p>© Pulse Dancers · <a href="https://www.instagram.com/pulsesouthafrica" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/pulseSouthAfrica" target="_blank" rel="noopener">Facebook</a></p>
-</div></footer></body></html>
+<script src="/assets/js/booking.js"></script>
+</div><script src="/assets/js/app.js"></script></body></html>

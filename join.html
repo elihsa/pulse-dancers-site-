@@ -1,39 +1,26 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pulse Dancers</title><link rel="stylesheet" href="/assets/css/styles.css"><link rel="icon" href="/images/logo.png"></head><body>
-<nav><div class="nav-inner">
-  <a class="logo" href="/"><img src="/images/logo.png" alt="Pulse Dancers"><span class="brand">Pulse Dancers</span></a>
-  <div class="links">
-    <a href="/prices.html">Prices</a>
-    <a href="/faq.html">FAQ</a>
-    <a href="/join.html">Join</a>
-    <a href="/book.html" class="button">Book</a>
-  </div>
-</div></nav>
-<div class="container">
-
-<section class="section card">
-  <h2>Join Pulse</h2>
+<!doctype html><html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<link rel="stylesheet" href="/assets/css/styles.css"><title>Pulse Dancers</title></head><body><nav><div class="nav-inner">
+<a href="/">Home</a><a href="/prices.html">Prices</a><a href="/faq.html">FAQ</a><a href="/join.html">Join</a><a class="button" href="/book.html">Book</a>
+</div></nav><div class="container">
+<section class="card">
+  <h2>New Recruit Application</h2>
   <form name="join" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data">
     <input type="hidden" name="form-name" value="join">
-    <p class="small" style="display:none;"><label>Don’t fill this out: <input name="bot-field" /></label></p>
-    <div class="grid-2">
-      <div><label>Full Name<input class="input" name="name" required></label></div>
-      <div><label>Email<input class="input" type="email" name="email" required></label></div>
-      <div><label>Phone<input class="input" name="phone"></label></div>
-      <div><label>City<input class="input" name="city"></label></div>
-      <div><label>Age<input class="input" type="number" min="18" name="age"></label></div>
-      <div><label>Height<input class="input" name="height" placeholder="e.g., 1.82m"></label></div>
-      <div><label>Build<input class="input" name="build" placeholder="Athletic / Lean / Muscular"></label></div>
-      <div><label>Dance / performance experience<textarea class="input" name="experience" rows="4"></textarea></label></div>
-      <div><label>Instagram handle<input class="input" name="instagram"></label></div>
-      <div><label>Travel availability<select class="input" name="travel">
-        <option>Local only</option><option>Province</option><option>Nationwide</option>
-      </select></label></div>
-      <div style="grid-column:1/-1"><label>Photos (up to 3)<input class="input" type="file" name="photos" multiple></label></div>
-      <div style="grid-column:1/-1"><label>Anything else?<textarea class="input" name="notes" rows="4"></textarea></label></div>
+    <p class="small" style="display:none;"><label>Don’t fill this out: <input name="bot-field"></label></p>
+    <div class="grid grid-2">
+      <div><label>Full Name</label><input name="full_name" required></div>
+      <div><label>Email</label><input type="email" name="email" required></div>
+      <div><label>Phone Number</label><input name="phone" required></div>
+      <div><label>Age</label><input type="number" name="age" required></div>
+      <div><label>City / Location</label><input name="city" required></div>
+      <div><label>Previous Dance / Entertainment Experience</label><input name="experience"></div>
+      <div><label>Why Do You Want to Join?</label><textarea name="why" required></textarea></div>
+      <div><label>Profile Photo (auto-resize)</label><input type="file" name="photo_profile" accept="image/*" required></div>
+      <div><label>Full Body Photo (auto-resize)</label><input type="file" name="photo_body" accept="image/*" required></div>
+      <div><label>Additional Skills</label><input name="skills"></div>
     </div>
-    <div style="margin-top:12px;"><button class="button" type="submit">Apply</button></div>
+    <p class="small">You’ll receive a confirmation after submission.</p>
+    <button class="button" type="submit">Apply</button>
   </form>
 </section>
-</div><footer class="footer"><div class="container small">
-  <p>© Pulse Dancers · <a href="https://www.instagram.com/pulsesouthafrica" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/pulseSouthAfrica" target="_blank" rel="noopener">Facebook</a></p>
-</div></footer></body></html>
+</div><script src="/assets/js/app.js"></script></body></html>

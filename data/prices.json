@@ -1,25 +1,55 @@
 {
   "items": [
     {
-      "name": "Topless Waiter",
-      "duration": "Per hour",
-      "price": "R xxx"
+      "name": "Topless Waiter (per guy)",
+      "duration": "Per hour (min 2 hours)",
+      "price": "R750"
     },
     {
-      "name": "Bottomless Waiter",
-      "duration": "Per hour",
-      "price": "R xxx"
+      "name": "Topless Waiter (1 hour only)",
+      "duration": "Per guy",
+      "price": "R850"
     },
     {
-      "name": "Exotic Dancer (One\u2011Man Show)",
-      "duration": "20\u201325 mins",
-      "price": "R xxx"
+      "name": "Bottomless Waiter (1 hour only)",
+      "duration": "Per guy",
+      "price": "R950"
+    },
+    {
+      "name": "Exotic Dancer \u2013 One-Man Show",
+      "duration": "~20 minutes",
+      "price": "R2500"
+    },
+    {
+      "name": "Two-Man Show",
+      "duration": "~25 minutes",
+      "price": "R4000"
+    },
+    {
+      "name": "Three-Man Show",
+      "duration": "~30 minutes",
+      "price": "R6000"
+    },
+    {
+      "name": "Four-Man Show",
+      "duration": "~35 minutes",
+      "price": "R8000"
+    },
+    {
+      "name": "Five-Man Show",
+      "duration": "~40 minutes",
+      "price": "R10000"
+    },
+    {
+      "name": "Six-Man Show",
+      "duration": "~45 minutes",
+      "price": "R12000"
     },
     {
       "name": "Naughty Games",
-      "duration": "30\u201345 mins",
-      "price": "R xxx"
+      "duration": "~35 minutes",
+      "price": "R1600"
     }
   ],
-  "notes": "Travel may apply outside major metros. All fees editable in CMS."
+  "notes": "Rates exclude sustenance and transport. All values are editable in the CMS."
 }
