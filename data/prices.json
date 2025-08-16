@@ -3,23 +3,23 @@
     {
       "name": "Topless Waiter",
       "duration": "Per hour",
-      "price": "R XXX"
+      "price": "R xxx"
     },
     {
       "name": "Bottomless Waiter",
       "duration": "Per hour",
-      "price": "R XXX"
+      "price": "R xxx"
     },
     {
-      "name": "Exotic Dancer (One-Man Show)",
-      "duration": "20–25 mins",
-      "price": "R XXX"
+      "name": "Exotic Dancer (One\u2011Man Show)",
+      "duration": "20\u201325 mins",
+      "price": "R xxx"
     },
     {
       "name": "Naughty Games",
-      "duration": "30–45 mins",
-      "price": "R XXX"
+      "duration": "30\u201345 mins",
+      "price": "R xxx"
     }
   ],
-  "notes": "All pricing is editable in the CMS. Travel costs may apply outside major metros."
+  "notes": "Travel may apply outside major metros. All fees editable in CMS."
 }

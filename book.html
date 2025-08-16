@@ -1,61 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pulse Dancers</title>
-  <meta name="description" content="South Africa's best male entertainment: choreographed shows, topless & bottomless waiters. Book nationwide." />
-  <link rel="stylesheet" href="/assets/css/styles.css" />
-  <link rel="icon" href="/images/logo.png">
-</head>
-<body>
-  <nav>
-    <div class="nav-inner">
-      <a class="logo" href="/"><img src="/images/logo.png" alt="Pulse Dancers logo"><span class="brand">Pulse Dancers</span></a>
-      <div class="links">
-        <a href="/prices.html">Prices</a>
-        <a href="/faq.html">FAQ</a>
-        <a href="/join.html">Join</a>
-        <a href="/book.html" class="button">Book</a>
-      </div>
-    </div>
-  </nav>
-  <div class="container">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pulse Dancers</title><link rel="stylesheet" href="/assets/css/styles.css"><link rel="icon" href="/images/logo.png"></head><body>
+<nav><div class="nav-inner">
+  <a class="logo" href="/"><img src="/images/logo.png" alt="Pulse Dancers"><span class="brand">Pulse Dancers</span></a>
+  <div class="links">
+    <a href="/prices.html">Prices</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="/join.html">Join</a>
+    <a href="/book.html" class="button">Book</a>
+  </div>
+</div></nav>
+<div class="container">
 
-<section class="card">
+<section class="section card">
   <h2>Book a Show</h2>
-  <p class="small">This form is powered by Netlify Forms. After you deploy to Netlify, submissions appear under <em>Forms</em> in your dashboard. We can later add online payments (PayFast/Peach/Stripe) to collect deposits.</p>
-  <form name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+  <form name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data">
     <input type="hidden" name="form-name" value="booking">
-    <p class="small" style="display:none;">
-      <label>Don’t fill this out: <input name="bot-field" /></label>
-    </p>
+    <p class="small" style="display:none;"><label>Don’t fill this out: <input name="bot-field" /></label></p>
     <div class="grid-2">
-      <div class="card"><label>Name<br><input required name="name" style="width:100%;padding:10px;border-radius:10px;border:1px solid #2a2a35;background:#0f0f15;color:#fff"></label></div>
-      <div class="card"><label>Email<br><input required type="email" name="email" style="width:100%;padding:10px;border-radius:10px;border:1px solid #2a2a35;background:#0f0f15;color:#fff"></label></div>
-      <div class="card"><label>Phone<br><input name="phone" style="width:100%;padding:10px;border-radius:10px;border:1px solid #2a2a35;background:#0f0f15;color:#fff"></label></div>
-      <div class="card"><label>City<br><input name="city" style="width:100%;padding:10px;border-radius:10px;border:1px solid #2a2a35;background:#0f0f15;color:#fff"></label></div>
-      <div class="card"><label>Service<br>
-        <select name="service" style="width:100%;padding:10px;border-radius:10px;border:1px solid #2a2a35;background:#0f0f15;color:#fff">
-          <option>Topless Waiter</option>
-          <option>Bottomless Waiter</option>
-          <option>Exotic Dancer (One-Man Show)</option>
-          <option>Naughty Games</option>
-        </select>
+      <div><label>Name<input class="input" name="name" required></label></div>
+      <div><label>Email<input class="input" type="email" name="email" required></label></div>
+      <div><label>Phone<input class="input" name="phone"></label></div>
+      <div><label>City<input class="input" name="city"></label></div>
+      <div><label>Event Type<select class="input" name="event_type">
+        <option>Bachelorette</option><option>Birthday</option><option>Girls Night</option><option>Other</option>
+      </select></label></div>
+      <div><label>Event Date<input class="input" type="date" name="date"></label></div>
+      <div><label>Start Time<input class="input" type="time" name="time"></label></div>
+      <div><label>Guests (approx.)<input class="input" type="number" name="guests" min="1"></label></div>
+      <div><label>Service<select class="input" name="service">
+        <option>Topless Waiter</option><option>Bottomless Waiter</option><option>Exotic Dancer (One‑Man Show)</option><option>Naughty Games</option>
+      </select></label></div>
+      <div><label>How many performers?<input class="input" type="number" name="performers" min="1" value="1"></label></div>
+      <div><label>Venue (home / private room?)<input class="input" name="venue"></label></div>
+      <div><label>Address<textarea class="input" name="address" rows="3"></textarea></label></div>
+      <div style="grid-column:1/-1"><label>Add‑ons (optional)
+        <label class="small"><input type="checkbox" name="addon_games"> Naughty Games</label>
+        <label class="small"><input type="checkbox" name="addon_photos"> Extra photo time</label>
       </label></div>
-      <div class="card"><label>Event Date<br><input type="date" name="date" style="width:100%;padding:10px;border-radius:10px;border:1px solid #2a2a35;background:#0f0f15;color:#fff"></label></div>
-      <div class="card" style="grid-column:1/-1;"><label>Details<br><textarea name="details" rows="5" style="width:100%;padding:10px;border-radius:10px;border:1px solid #2a2a35;background:#0f0f15;color:#fff"></textarea></label></div>
+      <div style="grid-column:1/-1"><label>Details<textarea class="input" name="details" rows="5" placeholder="Anything the performer should know (conservatism level, surprises, etc.)"></textarea></label></div>
+      <div><label>Budget (optional)<input class="input" name="budget"></label></div>
+      <div><label>How did you hear about us?<input class="input" name="ref"></label></div>
+      <div><label>Attachment (optional)<input class="input" type="file" name="file"></label></div>
     </div>
-    <div style="margin-top:12px;"><button type="submit" class="button">Submit Booking</button></div>
+    <div style="margin-top:12px;"><button class="button" type="submit">Submit Booking</button></div>
   </form>
 </section>
-
-  </div>
-  <footer class="footer">
-    <div class="container small">
-      <p>© Pulse Dancers · <a href="https://www.instagram.com/pulsesouthafrica" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/pulseSouthAfrica" target="_blank" rel="noopener">Facebook</a></p>
-    </div>
-  </footer>
-  <script src="/assets/js/app.js"></script>
-</body>
-</html>
+</div><footer class="footer"><div class="container small">
+  <p>© Pulse Dancers · <a href="https://www.instagram.com/pulsesouthafrica" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/pulseSouthAfrica" target="_blank" rel="noopener">Facebook</a></p>
+</div></footer></body></html>

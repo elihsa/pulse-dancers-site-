@@ -1,6 +1,20 @@
 {
-  "hero_title": "South Africa’s top choreographed male entertainment",
-  "hero_subtitle": "Book nationwide. Topless & bottomless waiters, exotic dancers, and choreographed shows.",
-  "cta_text": "Book a show",
-  "cta_url": "/book.html"
+  "hero_title": "Choreographed male entertainment across South Africa",
+  "hero_subtitle": "Topless & bottomless waiters, exotic dancers (no full nudity), choreographed shows. Book nationwide.",
+  "cta_text": "Book now",
+  "cta_url": "/book.html",
+  "services": [
+    {
+      "title": "Topless Waiters",
+      "desc": "Shirtless, photo\u2011ready, friendly hosts for conservative groups."
+    },
+    {
+      "title": "Exotic Dancers",
+      "desc": "20\u201325 minute choreographed shows. G\u2011string max; post\u2011show photos."
+    },
+    {
+      "title": "Naughty Games",
+      "desc": "30\u201345 minutes of guided party games (requires basic drinks & music)."
+    }
+  ]
 }

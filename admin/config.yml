@@ -11,19 +11,25 @@ collections:
     label: "Homepage"
     files:
       - file: "data/home.json"
-        label: "Hero & CTA"
+        label: "Hero & Services"
         name: "home"
         fields:
           - {label: "Hero Title", name: "hero_title", widget: "string"}
           - {label: "Hero Subtitle", name: "hero_subtitle", widget: "text"}
           - {label: "CTA Text", name: "cta_text", widget: "string"}
           - {label: "CTA URL", name: "cta_url", widget: "string"}
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "desc", widget: "text"}
 
   - name: "prices"
     label: "Prices"
     files:
       - file: "data/prices.json"
-        label: "Prices"
+        label: "Packages & Prices"
         name: "prices"
         fields:
           - label: "Items"
@@ -54,7 +60,6 @@ collections:
                   - {label: "Question", name: "q", widget: "string"}
                   - {label: "Answer", name: "a", widget: "text"}
 
-# Optional: separate gallery collection (images live in /images/uploads)
   - name: "gallery"
     label: "Gallery"
     folder: "images/uploads"
